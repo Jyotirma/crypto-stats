@@ -29,8 +29,8 @@ const CoinInfo = ({coin}) => {
   console.log("data",historicData);
 
   useEffect(()=>{
-    // eslint-disable-next-lin
     fetchHistoricData();
+    // eslint-disable-next-line
   },[days])
 
   const darkTheme = createTheme({
@@ -59,24 +59,6 @@ const CoinInfo = ({coin}) => {
     }
   }))
 
-  // const data = { 
-  //   labels: historicData.map((coin) => {
-  //     let date = new Date(coin[0]);
-  //     let time =
-  //       date.getHours() > 12
-  //         ? `${date.getHours() - 12}:${date.getMinutes()} PM`
-  //         : `${date.getHours()}:${date.getMinutes()} AM`;
-  //     return days === 1 ? time : date.toLocaleDateString();
-  //   }),
-
-  //   datasets: [
-  //     {
-  //       data: historicData.map((coin) => coin[1]),
-  //       label: `Price  Past ${days} Days  in ${currency}`,
-  //       borderColor: "white",
-  //     },
-  //   ],
-  // }
 
   const options= {
     elements: {

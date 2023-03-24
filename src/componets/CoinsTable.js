@@ -18,6 +18,7 @@ const CoinsTable = () => {
 
 useEffect(()=>{
     fetchCoins();
+    // eslint-disable-next-line
 }, [currency]);
 
 const darkTheme = createTheme({
@@ -74,7 +75,8 @@ const darkTheme = createTheme({
                                         fontFamily: "ubuntu"
                                     }}
                                     key={head}
-                                    align={head === "Coin" ? "" : "right"}>
+                                    align={head === "Coin" ? " " : "right"}
+                                    >
                                         {head}
                                     </TableCell>
                                 ))}
