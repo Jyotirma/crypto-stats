@@ -3,7 +3,6 @@ import { Box, Button, TextField } from '@mui/material'
 import { CryptoState } from '../../CryptoContext'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../firebase'
-import { async } from '@firebase/util'
 
 
 const Login = ({handleClose}) => {

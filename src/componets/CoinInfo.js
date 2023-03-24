@@ -29,6 +29,7 @@ const CoinInfo = ({coin}) => {
   console.log("data",historicData);
 
   useEffect(()=>{
+    // eslint-disable-next-lin
     fetchHistoricData();
   },[days])
 

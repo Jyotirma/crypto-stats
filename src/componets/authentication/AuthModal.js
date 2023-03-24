@@ -7,10 +7,10 @@ import Button from '@mui/material/Button';
 import { AppBar, Tab, Tabs } from '@mui/material';
 import Login from './Login';
 import Signup from './Signup';
-import GoogleButton from 'react-google-button';
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from '../../firebase';
-import { CryptoState } from '../../CryptoContext';
+// import GoogleButton from 'react-google-button';
+// import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+// import { auth } from '../../firebase';
+// import { CryptoState } from '../../CryptoContext';
 
 const style = {
     position: 'absolute',
@@ -37,27 +37,27 @@ export default function AuthModal() {
       setValue(newValue);
      };
 
-     const { setAlert } = CryptoState()
+    //  const { setAlert } = CryptoState()
 
-     const googleProvider = new GoogleAuthProvider()
+    //  const googleProvider = new GoogleAuthProvider()
 
-     const signInWithGoogle = ()=>{
-        signInWithPopup(auth, googleProvider).then(res=>{
-            setAlert({
-                open: true,
-                message: `Sign Up Successful. Welcome ${res.user.email}`,
-                type: 'success'
-              })
-              handleClose();
-        }).catch((error)=>{
-            setAlert({
-                open: true,
-                message: error.message,
-                type: 'error'
-              })
-              return
-        })
-     }
+    //  const signInWithGoogle = ()=>{
+    //     signInWithPopup(auth, googleProvider).then(res=>{
+    //         setAlert({
+    //             open: true,
+    //             message: `Sign Up Successful. Welcome ${res.user.email}`,
+    //             type: 'success'
+    //           })
+    //           handleClose();
+    //     }).catch((error)=>{
+    //         setAlert({
+    //             open: true,
+    //             message: error.message,
+    //             type: 'error'
+    //           })
+    //           return
+    //     })
+    //  }
 
     return (
         <div>
@@ -100,11 +100,11 @@ export default function AuthModal() {
                             gap: 20,
                             fontSize: 20,
                             }}>
-                            <span >OR</span>
+                            {/* <span >OR</span>
                             <GoogleButton
                                 style={{ width: "100%", outline: "none" }}
                                 onClick={signInWithGoogle}
-                            />
+                            /> */}
                         </Box>
                     </Box>  
                 </Fade>
